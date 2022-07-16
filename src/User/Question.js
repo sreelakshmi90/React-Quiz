@@ -4,9 +4,13 @@ import quiz from './././data/quiz';
 
 export default function Question() {
   const questionArr = quiz;
-  const [question, setQuestion] = useState(questionArr[0]);
+  const [current, setCurrent] = useState(0);
+  const [question, setQuestion] = useState(questionArr[current]);
   const nextQuestion = () => {
-
+    if(current < questionArr.length) {
+      setCurrent(current + 1);
+      setQuestion(questionArr[current]);
+    }
   }
 
   return (
