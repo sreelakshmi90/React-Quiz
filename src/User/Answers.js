@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function Question() {
+export default function Answers() {
   const answer = {
     type: 'checkbox',
     values: ["computer Style Sheet", "Cascade Style Sheet" , "Creative Style Sheet"]
@@ -19,8 +19,10 @@ export default function Question() {
             <li onClick={checkAnswer}
               className="option"
               data-id={index}>
-              <span>{(index+10).toString(36)}</span>
-             <p>{value}</p>
+             <p> 
+               <span>{(index+10).toString(36).toUpperCase()}</span>
+               {value}
+              </p>
             </li>
           ))
         }
