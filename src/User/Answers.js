@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-export default function Answers() {
+export default function Answers(props) {
   const [isAnswered,setIsAnswered] = useState(false);
   const answer = {
     type: 'checkbox',
